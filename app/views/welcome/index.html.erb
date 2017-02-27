@@ -1,1 +1,5 @@
 <h1>Hello, Rails!</h1>
+<!-- If you want to link to an action in the same controller,
+you don't need to specify the :controller option, as Rails
+will default to the current controller -->
+<%= link_to 'My Blog', controller: 'articles' %>

@@ -1,0 +1,22 @@
+<h1>Listing Articles</h1>
+
+<!-- This link allows you to bring up the form to create a new article -->
+<%= link_to 'New article', new_article_path %>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Text</th>
+	</tr>
+
+	<!-- The link_to method is a Rail's built-in view helper. 
+	It creates a hyperlink based on text to display and 
+	where to go -->
+	<% @article.each do |article| %>
+		<tr>
+			<td><%= article.title %></td>
+			<td><%= article.text %></td>			
+			<td><%= link_to 'Show', article_path(article) %></td>
+		</tr>
+	<% end %>
+</tr>
